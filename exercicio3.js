@@ -4,7 +4,7 @@ function financeiro() {
 
     for (let mes = 1; mes <= 12; mes++) {
         const ganhoBruto = parseFloat(prompt("Digite o ganho bruto do mês ${mes}:"));
-        const gasto = parseFloat(prompt(`Digite os gastos do mês ${mes}:`));
+        const gasto = parseFloat(prompt("Digite os gastos do mês ${mes}:"));
 
         ganhoBrutoAnual += ganhoBruto;
         gastoAnual += gasto;
