@@ -1,25 +1,35 @@
 function picoleteria() {
-    const sabores = {
-        'a': { nome: 'Chocolate', preco: 1.50 },
-        'b': { nome: 'Morango', preco: 2.50 },
-        'c': { nome: 'Creme', preco: 2.50 },
-        'd': { nome: 'Manga', preco: 3.20 },
-        'e': { nome: 'Melancia', preco: 3.40 },
-        'f': { nome: 'Vanilla Ice', preco: 3.00 },
-        'g': { nome: 'Céu Azul', preco: 3.60 },
-        'h': { nome: 'Brownie', preco: 4.00 },
-        'i': { nome: 'Hawaiano', preco: 5.00 }
-    };
+    
+    alert("Sabores: ")
+    alert("a.Chocolate ")
+    alert("b.Morango ")
+    alert("c.Creme ")
+    alert("d.Manga ")
+    alert("e.Melancia ")
+    alert("f.Vanilla ice ")
+    alert("g.Céu azul ")
+    alert("h.Brownie ")
+    alert("i.Havaiano ")
 
-    const opcao = prompt(
-        "Escolha o sabor do picolé:\n" +
-        "a. Chocolate\nb. Morango\nc. Creme\nd. Manga\ne. Melancia\n" +
-        "f. Vanilla Ice\ng. Céu Azul\nh. Brownie\ni. Hawaiano"
-    ).toLowerCase();
+    const sabor = (prompt("Digite a letra do sabor desejado: "))
 
-    if (sabores[opcao]) {
-        console.log(`Sabor: ${sabores[opcao].nome} - Preço: R$ ${sabores[opcao].preco.toFixed(2)}`);
-    } else {
-        console.log("Opção inválida");
+    if (sabor == "a"){
+        alert("Custa: R$1.50"); 
+    } else if (sabor == "b") {
+        alert("Custa: R$2,50") 
+    } else if (sabor == "c") {
+        alert("Custa: R$2,50"); 
+    } else if (sabor == "d"){
+        alert("Custa: R$3,20") 
+    } else if (sabor == "e") {
+        alert("Custa: R$3,40") 
+    } else if (sabor == "f"){
+        alert("Custa: R$3,00") 
+    } else if (sabor == "g") {
+        alert("Custo: R$3,60"); 
+    } else if (sabor == "h") {
+        alert("Custa: R$4,00"); 
+    } else if (sabor == "i") {
+        alert("Custa: R$5,00"); 
     }
 }

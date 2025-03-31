@@ -1,22 +1,29 @@
 function balancoFinanceiro() {
-    let ganhoBrutoAnual = 0;
-    let gastoAnual = 0;
+    let mesesGanho = []
+    let mesesDespesa = []
+    let ganhoFinal = 0
+    let despesaFinal = 0
+    let lucro = 0
 
-    for (let mes = 1; mes <= 12; mes++) {
-        const ganhoBruto = parseFloat(prompt(`Digite o ganho bruto do mês ${mes}:`));
-        const gasto = parseFloat(prompt(`Digite os gastos do mês ${mes}:`));
-        
-        ganhoBrutoAnual += ganhoBruto;
-        gastoAnual += gasto;
+    for (var i = 0; i < 12; i++) {
+        mesesGanho[i] = parseFloat(prompt("Digite o ganho total do mês"));
+        ganhoFinal = ganhoFinal + mesesGanho[i];
+
+        mesesDespesa[i] = parseFloat(prompt("Digite a despesa total do mês"));
+        despesaFinal = despesaFinal + mesesDespesa[i]
     }
 
-    const saldoFinanceiro = ganhoBrutoAnual - gastoAnual;
-    const situacao = saldoFinanceiro >= 0 ? "Lucro" : "Prejuízo";
+    lucro = ganhoFinal - despesaFinal
 
-    console.log(`Ganho Bruto Anual: R$ ${ganhoBrutoAnual.toFixed(2)}`);
-    console.log(`Gasto Anual: R$ ${gastoAnual.toFixed(2)}`);
-    console.log(`Saldo Financeiro: R$ ${saldoFinanceiro.toFixed(2)}`);
-    console.log(`Situação: ${situacao}`);
+    if (lucro > 0) {
+        document.write(`A empresa teve um lucro de: R$${lucro}`)
+    } else {
+        if (lucro == 0) {
+            document.write(`A empresa não teve lucros nem prejuízos`)
+        } else {
+            document.write(`A empresa teve um prejuízo de: R$${lucro}`)
+        }
+    }
 }
 
 

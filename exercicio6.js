@@ -1,12 +1,14 @@
 function verificarLetra() {
-    const letra = prompt("Digite uma letra:").toLowerCase();
-    const vogais = ['a', 'e', 'i', 'o', 'u'];
-    
-    if (vogais.includes(letra)) {
-        console.log("É uma vogal");
-    } else if (letra >= 'a' && letra <= 'z') {
-        console.log("É uma consoante");
-    } else {
-        console.log("Não é uma letra válida");
-    }
+    const vogal = ["a", "e", "i", "o", "u"];
+    letra = prompt("Digite uma letra.");
+
+    for (i = 0; i < vogal.length; i++) {
+        if (letra == vogal[i]) {
+            alert("A letra é uma vogal");
+            break;
+        }
+        
+        alert("A letra é consoante");
+        break;
+    };
 }

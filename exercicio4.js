@@ -1,10 +1,12 @@
 function ordenarDecrescente() {
-    const valores = [];
+    var numeros = [];
     
-    for (let i = 0; i < 4; i++) {
-        valores.push(parseInt(prompt(`Digite o ${i + 1}º valor inteiro:`)));
-    }
+    numeros[1] = parseFloat(prompt("Informe um número:"))
+    numeros[2] = parseFloat(prompt("Informe um número:"))
+    numeros[3] = parseFloat(prompt("Informe um número:"))
+    numeros[4] = parseFloat(prompt("Informe um número:"))
+    
+    numeros.sort((a,b) => b - a);
 
-    valores.sort((a, b) => b - a);
-    console.log("Valores em ordem decrescente:", valores);
+    alert("Ordem decrescente: " + numeros)
 }
